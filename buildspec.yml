@@ -2,16 +2,24 @@
 
 version: 0.2
 phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+    commands:
+      - echo install
   pre_build:
     commands:
     - echo "Entered the pre-build phase"
   build:
     commands:
     - echo "Entered build phase"
-    - mvn clean package
+    - mvn package
   post_build:
     commands:
     - echo "Entered the post-build phase"
 artifacts:
   files:
-    - target/aws-beanstalk-pipeline-example-0.0.1-SNAPSHOT
+    - target/aws-beanstalk-pipeline-example-0.0.1-SNAPSHOT.war
+
+
+
