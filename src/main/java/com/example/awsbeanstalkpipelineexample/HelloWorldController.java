@@ -13,4 +13,10 @@ public class HelloWorldController {
     public String hello() {
         return "Hello TechPrimers";
     }
+
+    @GetMapping("/ping")
+    public String pint(){
+
+        return "PONG";
+    }
 }
